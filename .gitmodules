@@ -1,0 +1,6 @@
+[submodule "modules/json-c"]
+	path = modules/json-c
+	url = https://github.com/json-c/json-c.git
+[submodule "modules/xdp-tools"]
+	path = modules/xdp-tools
+	url = https://github.com/xdp-project/xdp-tools
