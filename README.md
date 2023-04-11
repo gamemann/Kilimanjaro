@@ -6,8 +6,8 @@ This program should be deployed on edge servers meant to forward traffic/announc
 **Note** - This code was last updated on **June 5th, 2022** and I no longer work on this project. There were changes made to this software after this date in a private repository, but I only wanted to open-source the code **I wrote**. I also removed additional code that wasn't mine.
 
 ## Useful Programs
-* Killtrocity - Used for communication between Kilimajaro and Killfrenzy.
-* Killfrenzy - Web back-end used to modify IPs, display/consume stats, and more.
+* [Killtrocity](https://github.com/gamemann/Killtrocity) - Used for communication between Kilimajaro and Killfrenzy.
+* [Killfrenzy](https://github.com/gamemann/Killfrenzy) - Web back-end used to modify IPs, display/consume stats, and more.
 
 Additionally, I wrote an IP mapper tool that deploys on the dedicated servers running game servers so that traffic from the game server goes through the same edge server the client's traffic came in via IPIP. This allows for server-side validation for layer-7 filters if implemented.
 
