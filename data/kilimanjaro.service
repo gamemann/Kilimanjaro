@@ -1,0 +1,12 @@
+[Unit]
+Description=Kilimanjaro program.
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+ExecStart=/usr/bin/kilimanjaro
+ExecStopPost=/bin/bash -c "/bin/ip link set dev $(cat /etc/kilimanjaro/kilimanjaro.json  | jq -r '.interface') xdp off"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
