@@ -17,6 +17,5 @@ Additionally, I wrote an IP mapper tool that deploys on the dedicated servers ru
 * Collects a lot of stats such as packets/bytes per second and sends them to Killfrenzy.
 * Performs [A2S_INFO](https://developer.valvesoftware.com/wiki/Server_queries#A2S_INFO) caching through [AF_XDP](https://www.kernel.org/doc/html/latest/networking/af_xdp.html) with challenge support.
 
-
 ## Credits
 * [Christian Deacon](https://github.com/gamemann)
