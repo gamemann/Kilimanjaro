@@ -15,11 +15,13 @@ Additionally, I wrote an IP mapper tool that deploys on the dedicated servers ru
 
 ## Features
 * Utilizes [XDP](https://www.iovisor.org/technology/xdp) and [AF_XDP](https://www.kernel.org/doc/html/latest/networking/af_xdp.html) for fast packet processing.
-* Automatically whitelists outbound traffic and reports to Killfrenzy to sync all edge servers.
+* Automatically whitelists outbound traffic via port punching and reports to Killfrenzy to sync all edge servers.
 * Collects a lot of stats such as packets/bytes per second and sends them to Killfrenzy.
 * Performs [A2S_INFO](https://developer.valvesoftware.com/wiki/Server_queries#A2S_INFO) caching through [AF_XDP](https://www.kernel.org/doc/html/latest/networking/af_xdp.html) with challenge support.
 * Rate limits for TCP, UDP, and ICMP.
 * Whitelist and blacklist maps with CIDR support that allows you to allow/drop traffic with IP ranges.
+
+**Note** - I didn't include any of the layer-7 filters that were implemented in the private version of this project. You may implement client/server-side layer-7 filters in the `src/xdp_prog.c` file. It works very well with the project's port punching functionality that allows outbound connections through automatically.
 
 ## Credits
 * [Christian Deacon](https://github.com/gamemann)
