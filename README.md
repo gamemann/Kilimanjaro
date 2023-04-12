@@ -5,6 +5,8 @@ This program should be deployed on edge servers meant to forward traffic/announc
 
 **Note** - This code was last updated on **June 5th, 2022** and I no longer work on this project. There were changes made to this software after this date in a private repository, but I only wanted to open-source the code **I wrote**. I also removed additional code that wasn't mine.
 
+This program contains a lot of code others will likely find useful with XDP, AF_XDP, and more.
+
 ## Useful Programs
 * [Killtrocity](https://github.com/gamemann/Killtrocity) - Used for communication between Kilimajaro and Killfrenzy.
 * [Killfrenzy](https://github.com/gamemann/Killfrenzy) - Web back-end used to modify IPs, display/consume stats, and more.
@@ -16,6 +18,8 @@ Additionally, I wrote an IP mapper tool that deploys on the dedicated servers ru
 * Automatically whitelists outbound traffic and reports to Killfrenzy to sync all edge servers.
 * Collects a lot of stats such as packets/bytes per second and sends them to Killfrenzy.
 * Performs [A2S_INFO](https://developer.valvesoftware.com/wiki/Server_queries#A2S_INFO) caching through [AF_XDP](https://www.kernel.org/doc/html/latest/networking/af_xdp.html) with challenge support.
+* Rate limits for TCP, UDP, and ICMP.
+* Whitelist and blacklist maps with CIDR support that allows you to allow/drop traffic with IP ranges.
 
 ## Credits
 * [Christian Deacon](https://github.com/gamemann)
