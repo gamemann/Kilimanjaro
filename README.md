@@ -11,7 +11,7 @@ This program contains a lot of code others will likely find useful with XDP, AF_
 * [Killtrocity](https://github.com/gamemann/Killtrocity) - Used for communication between Kilimajaro and Killfrenzy.
 * [Killfrenzy](https://github.com/gamemann/Killfrenzy) - Web back-end used to modify IPs, display/consume stats, and more.
 
-Additionally, I wrote an IP mapper tool that deploys on the dedicated servers running game servers so that traffic from the game server goes through the same edge server the client's traffic came in via IPIP. This allows for server-side validation for layer-7 filters if implemented.
+Additionally, I wrote an [IP mapper tool](https://github.com/gamemann/TC-IPIP-Mapper) that deploys on the dedicated servers running game servers so that traffic from the game server goes through the same edge server the client's traffic came in via IPIP. This allows for server-side validation for layer-7 filters if implemented.
 
 ## Features
 * Utilizes [XDP](https://www.iovisor.org/technology/xdp) and [AF_XDP](https://www.kernel.org/doc/html/latest/networking/af_xdp.html) for fast packet processing.
