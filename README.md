@@ -3,9 +3,14 @@ This is a packet processing/forwarding program I made for a gaming community I u
 
 This program should be deployed on edge servers meant to forward traffic/announce IP blocks via BGP. It utilizes [XDP](https://www.iovisor.org/technology/xdp) and the [IPIP](https://en.wikipedia.org/wiki/IP_in_IP) network protocol.
 
-**Note** - This code was last updated on **June 5th, 2022** and I no longer work on this project. There were changes made to this software after this date in a private repository, but I only wanted to open-source the code **I wrote**. I also removed additional code that wasn't mine.
+**Note** - This code was last updated on **June 5th, 2022**. There were changes made to this software after this date in a private repository, but I only wanted to open-source the code **I wrote**. I also removed additional code that wasn't mine.
 
 This program contains a lot of code others will likely find useful with XDP, AF_XDP, and more.
+
+## No Longer Supported!!!
+This project is no longer supported and honestly unfinished/outdated. I no longer have the time to work on this project and I'm also tied to NDAs that restrain me from sharing layer-7 filtering code which is what would have made this stateful firewall most effective. I still believe a lot of the code is useful if you're aiming to build a stateful firewall with special features such as `A2S_INFO` caching with XDP, but getting these applications running in production requires tuning from developers who understand the inner-workings of Kilimanjaro in my opinion plus the other smaller tools I've made such as my TC IPIP Mapper [tool](https://github.com/gamemann/TC-IPIP-Mapper). With that said, I did have this running in production a couple of years ago with some small issues in a gaming community in the past (overall, it worked fairly well with what we had at the time, but I had a very specialized setup).
+
+As for the biggest issues with this project, I believe Killfrenzy was the most flawed since I shouldn't have used Django and implemented back-end communication from the web back-bone to Killtrocity inside of Django itself using background tasks. This resulted in a lot of threading/performance issues. Additionally, the low-level socket I made [here](https://github.com/gamemann/Kilimanjaro/blob/master/src/socket.c#L135) within Kilimanjaro that interacts with Killtrocity would sometimes break after a week or so until you restarted Kilimanjaro. Out of all the programs, I do believe Kilimanjaro is the most complete.
 
 ## Useful Programs
 * [Killtrocity](https://github.com/gamemann/Killtrocity) - Used for communication between Kilimajaro and Killfrenzy.
